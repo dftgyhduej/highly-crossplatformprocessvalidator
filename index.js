@@ -1,9 +1,6 @@
-function isSubsequence(s, t) {
-  let i = 0;
-  let j = 0;
-  while (i < s.length && j < t.length) {
-    if (s[i] === t[j]) i++;
-    j++;
+const isPrime = (num) => {
+  for (let i = 2, sqrt = Math.sqrt(num); i <= sqrt; i++) {
+    if (num % i === 0) return false;
   }
-  return i === s.length;
-}
+  return num > 1;
+};
